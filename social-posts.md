@@ -1,6 +1,6 @@
 # Social media posts — Madanapalle Meditation Pyramid
 
-Replace `[YOUR-WEBSITE-LINK]` with your live website URL (from Vercel) before posting.
+Replace `https://madanapalle-pyramid.vercel.app` with your live website URL (from Vercel) before posting.
 Keep the UPI ID and account name exactly as written.
 
 Donation shortcuts to paste anywhere:
@@ -20,7 +20,7 @@ Donation shortcuts to paste anywhere:
 > Even ₹10 helps us finish it. 🙏
 >
 > See progress & donate 👇
-> [YOUR-WEBSITE-LINK]
+> https://madanapalle-pyramid.vercel.app
 
 **Reply 1 (thread):**
 
@@ -52,7 +52,7 @@ Donation shortcuts to paste anywhere:
 > This is our humble appeal to you. **Even ₹10 will help**, and will bring peace and a smile to countless people for years to come. 🙏
 >
 > 👉 See the full progress, photos, videos and donation details here:
-> **[YOUR-WEBSITE-LINK]**
+> **https://madanapalle-pyramid.vercel.app**
 >
 > 📲 UPI: **6509092255@myapgb** (GPay / PhonePe / Paytm / BHIM)
 > 🏦 A/C: 650910016995155 · IFSC: UBIN00G7999 · Andhra Pradesh Grameena Bank, Madanapalle
@@ -70,7 +70,7 @@ Donation shortcuts to paste anywhere:
 >
 > 🙏 *Even ₹10 helps us complete it — and will make many people smile.*
 >
-> 📖 Story, photos & videos: [YOUR-WEBSITE-LINK]
+> 📖 Story, photos & videos: https://madanapalle-pyramid.vercel.app
 >
 > 📲 *UPI:* `6509092255@myapgb`
 > 🏦 A/C 650910016995155 · IFSC UBIN00G7999
@@ -88,7 +88,7 @@ Donation shortcuts to paste anywhere:
 >
 > 🙏 *కేవలం ₹10 దానం కూడా ఎందరికో శాంతిని, నవ్వును పంచుతుంది.*
 >
-> 📖 వివరాలు, ఫోటోలు, వీడియోలు: [YOUR-WEBSITE-LINK]
+> 📖 వివరాలు, ఫోటోలు, వీడియోలు: https://madanapalle-pyramid.vercel.app
 > 📲 UPI: `6509092255@myapgb`
 > 🏦 Madanapalle Pyramid Spiritual Society · A/C 650910016995155 · IFSC UBIN00G7999
 >
@@ -104,7 +104,7 @@ Donation shortcuts to paste anywhere:
 >
 > 🙏 *मात्र ₹10 का दान भी अनेक लोगों के चेहरे पर मुस्कान और शांति लाएगा।*
 >
-> 📖 विवरण, तस्वीरें व वीडियो: [YOUR-WEBSITE-LINK]
+> 📖 विवरण, तस्वीरें व वीडियो: https://madanapalle-pyramid.vercel.app
 > 📲 UPI: `6509092255@myapgb`
 > 🏦 Madanapalle Pyramid Spiritual Society · A/C 650910016995155 · IFSC UBIN00G7999
 >
