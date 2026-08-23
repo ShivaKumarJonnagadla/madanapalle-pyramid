@@ -1,4 +1,4 @@
-# Social media posts — Madanapalle Meditation Pyramid
+# Social media posts, Madanapalle Meditation Pyramid
 
 The live website URL (https://madanapalle-pyramid.vercel.app) is already filled in below.
 Keep the UPI ID and account name exactly as written.
@@ -15,7 +15,7 @@ Donation shortcuts to paste anywhere:
 **Main tweet (English):**
 
 > 🔺 A family donated their land. Well-wishers built the foundation, borewell & pillars.
-> Now the funds have run out — and a meditation pyramid in Madanapalle stands half-built.
+> Now the funds have run out, and a meditation pyramid in Madanapalle stands half-built.
 >
 > Even ₹10 helps us finish it. 🙏
 >
@@ -26,7 +26,7 @@ Donation shortcuts to paste anywhere:
 
 **Reply 1 (thread):**
 
-> For 5+ years our community dreamed of a meditation pyramid — a free, open space for anyone to sit and find peace.
+> For 5+ years our community dreamed of a meditation pyramid, a free, open space for anyone to sit and find peace.
 >
 > We asked officials for land. No help came. So my parents donated 11,763 sq ft of their own (≈₹1 crore). Registered 5 Nov 2024. 🙏
 
@@ -45,11 +45,11 @@ Donation shortcuts to paste anywhere:
 
 > 🔺 **Help us complete a Meditation Pyramid in Madanapalle** 🔺
 >
-> For more than five years, the well-wishers of the **Madanapalle Pyramid Spiritual Society** have dreamed of building a meditation pyramid — a peaceful, open space where anyone, from any walk of life, can come to sit, breathe and find calm.
+> For more than five years, the well-wishers of the **Madanapalle Pyramid Spiritual Society** have dreamed of building a meditation pyramid, a peaceful, open space where anyone, from any walk of life, can come to sit, breathe and find calm.
 >
-> In August 2024 we formed a team and searched for land. We approached government officials for a donation of land, but no help came. When every door seemed shut, my parents — **Sri J. Venkatarayappa Chetty and Smt. J. Anuradha**, meditators of nearly 25 years — donated **11,763 sq ft of their own land (worth about ₹1 crore)**. The registration was completed on **5 November 2024**.
+> In August 2024 we formed a team and searched for land. We approached government officials for a donation of land, but no help came. When every door seemed shut, my parents, **Sri J. Venkatarayappa Chetty and Smt. J. Anuradha**, meditators of nearly 25 years, donated **11,763 sq ft of their own land (worth about ₹1 crore)**. The registration was completed on **5 November 2024**.
 >
-> Since then, kind-hearted donors have given around **₹18,00,000**, and every single rupee has gone into the work — the land pooja, the foundation, the borewell, the electricity connection, the culvert and the pillars. **That money is now fully used, and construction has paused.**
+> Since then, kind-hearted donors have given around **₹18,00,000**, and every single rupee has gone into the work, the land pooja, the foundation, the borewell, the electricity connection, the culvert and the pillars. **That money is now fully used, and construction has paused.**
 >
 > This is our humble appeal to you. **Even ₹10 will help**, and will bring peace and a smile to countless people for years to come. 🙏
 >
@@ -60,7 +60,7 @@ Donation shortcuts to paste anywhere:
 > 🏦 A/C: 650910016995155 · IFSC: UBIN00G7999 · Andhra Pradesh Grameena Bank, Madanapalle
 > 🧾 Account name: **Madanapalle Pyramid Spiritual Society**
 >
-> ☎️ Contacts — President J. Anuradha +91 92469 83035 · Vice President T. Venkataramana +91 99893 58319 · Treasurer Subramanyam +91 99898 59591
+> ☎️ Contacts, President J. Anuradha +91 92469 83035 · Vice President T. Venkataramana +91 99893 58319 · Treasurer Subramanyam +91 99898 59591
 >
 > Please give what your heart allows, and share this post so it reaches more kind souls. 🙏
 >
@@ -70,11 +70,11 @@ Donation shortcuts to paste anywhere:
 
 ## 3. Telegram / WhatsApp (forward-friendly)
 
-> 🔺 *Meditation Pyramid — Madanapalle* 🔺
+> 🔺 *Meditation Pyramid, Madanapalle* 🔺
 >
 > A family donated their land. Well-wishers built the foundation, borewell, electricity & pillars. Now the funds are finished and the work has stopped.
 >
-> 🙏 *Even ₹10 helps us complete it — and will make many people smile.*
+> 🙏 *Even ₹10 helps us complete it, and will make many people smile.*
 >
 > 📖 Story, photos & videos: https://madanapalle-pyramid.vercel.app
 >
@@ -88,7 +88,7 @@ Donation shortcuts to paste anywhere:
 
 ---
 
-## 4. Telugu (తెలుగు) — short version for any platform
+## 4. Telugu (తెలుగు), short version for any platform
 
 > 🔺 *మదనపల్లెలో ధ్యాన పిరమిడ్ నిర్మాణం* 🔺
 >
@@ -104,7 +104,7 @@ Donation shortcuts to paste anywhere:
 
 ---
 
-## 5. Hindi (हिन्दी) — short version for any platform
+## 5. Hindi (हिन्दी), short version for any platform
 
 > 🔺 *मदनपल्ले में ध्यान पिरामिड निर्माण* 🔺
 >
@@ -121,8 +121,8 @@ Donation shortcuts to paste anywhere:
 ---
 
 ### Posting tips
-- Attach 2–3 of the best photos (team photo, pillar work, land pooja) to the Facebook and
-  Twitter posts — posts with images get far more reach.
+- Attach 2-3 of the best photos (team photo, pillar work, land pooja) to the Facebook and
+  Twitter posts, posts with images get far more reach.
 - On Twitter/X, post the "Main tweet" first, then add the two replies as a thread.
 - Pin the post to the top of your profile/page so new visitors see it first.
-- Ask 5–10 friends to reshare within the first hour — it hugely boosts reach.
+- Ask 5-10 friends to reshare within the first hour, it hugely boosts reach.
