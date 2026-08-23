@@ -1,17 +1,17 @@
-# Madanapalle Meditation Pyramid — Fundraising Website
+# Madanapalle Meditation Pyramid, Fundraising Website
 
 A single-page fundraising website for the **Madanapalle Pyramid Spiritual Society** to help
 complete a meditation pyramid. Land was donated by the family; the foundation, borewell,
 electricity and pillars are done; funds are now exhausted and the work has paused.
 
-The site is a plain static page — no build step, no dependencies.
+The site is a plain static page, no build step, no dependencies.
 
 ## Files
 
 ```
 pyramid-site/
 ├── index.html          ← the complete website (photos + videos + donation details)
-├── artifact.html       ← self-contained copy (photos inlined, no videos) — for quick sharing
+├── artifact.html       ← self-contained copy (photos inlined, no videos), for quick sharing
 ├── build_artifact.py   ← regenerates artifact.html from index.html
 └── assets/
     ├── img/            ← photographs used on the page

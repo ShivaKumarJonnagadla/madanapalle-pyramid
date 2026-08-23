@@ -7,11 +7,11 @@ You have two options. **Option A is the fastest** and does not even need GitHub.
 
 ---
 
-## Option A — Deploy straight to Vercel (fastest, ~2 minutes)
+## Option A, Deploy straight to Vercel (fastest, ~2 minutes)
 
 ```bash
 cd "/Users/shivakumar.jonnagadla1/Downloads/Twitter/pyramid-site"
-vercel login          # opens the browser — sign in with Google/GitHub/email
+vercel login          # opens the browser, sign in with Google/GitHub/email
 vercel                # answer the prompts (accept defaults). This makes a preview URL.
 vercel --prod         # promotes it to your public production URL
 ```
@@ -21,7 +21,7 @@ To re-deploy after any edit, just run `vercel --prod` again.
 
 ---
 
-## Option B — Put it on GitHub first, then connect Vercel
+## Option B, Put it on GitHub first, then connect Vercel
 
 Useful if you want the code stored on GitHub and auto-deploys on every push.
 
@@ -53,5 +53,5 @@ Then either:
 ## Custom domain (optional)
 
 In the Vercel dashboard → your project → **Settings → Domains**, you can add a name
-like `madanapallepyramid.org` if you buy one. Not required — the free `.vercel.app`
+like `madanapallepyramid.org` if you buy one. Not required, the free `.vercel.app`
 address works perfectly for sharing.
