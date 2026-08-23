@@ -209,6 +209,21 @@
   .family{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:1.3rem 1.4rem;box-shadow:var(--shadow);margin-top:1.4rem}
   .family strong{color:var(--accent)}
 
+  /* contacts */
+  .contacts{display:grid;gap:1rem;grid-template-columns:1fr}
+  @media(min-width:720px){.contacts{grid-template-columns:repeat(3,1fr)}}
+  .contact-card{
+    display:flex;flex-direction:column;gap:.15rem;text-decoration:none;
+    background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);
+    border-radius:14px;padding:1.2rem 1.3rem;box-shadow:var(--shadow);
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .contact-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(34,28,46,.14)}
+  .contact-card .role{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .contact-card .cname{font-family:"Marcellus",serif;font-size:1.2rem;color:var(--ink)}
+  .contact-card .cnum{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;margin-top:.2rem}
+  .contact-card .cnum::before{content:"📞 ";}
+
   footer{background:var(--indigo);color:#CFC6DC;padding:2.4rem 1.4rem;text-align:center}
   footer .fname{font-family:"Marcellus",serif;font-size:1.2rem;color:#F2C871}
   footer p{margin:.4rem 0;font-size:.92rem}
@@ -493,8 +508,35 @@
           <dt>Branch</dt><dd>Madanapalle</dd>
           <dt class="">UPI ID</dt><dd class="">6509092255@myapgb</dd>
         </dl>
-        <div class="bank-note">Please confirm the account name reads <strong>Madanapalle Pyramid Spiritual Society</strong> in your app before sending. For an 80G / donation receipt, contact the society.</div>
+        <div class="bank-note">Please confirm the account name reads <strong>Madanapalle Pyramid Spiritual Society</strong> in your app before sending.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap narrow">
+    <div class="kicker">
+      <span class="eyebrow">Questions? Talk to us directly</span>
+      <h2>Contact the society</h2>
+    </div>
+    <div class="contacts">
+      <a class="contact-card" href="tel:+919246983035">
+        <span class="role">President</span>
+        <span class="cname">J. Anuradha</span>
+        <span class="cnum">+91 92469 83035</span>
+      </a>
+      <a class="contact-card" href="tel:+919989358319">
+        <span class="role">Vice President</span>
+        <span class="cname">T. Venkataramana</span>
+        <span class="cnum">+91 99893 58319</span>
+      </a>
+      <a class="contact-card" href="tel:+919989859591">
+        <span class="role">Treasurer</span>
+        <span class="cname">Subramanyam</span>
+        <span class="cnum">+91 99898 59591</span>
+      </a>
     </div>
   </div>
 </section>
