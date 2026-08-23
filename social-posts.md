@@ -172,7 +172,6 @@ and post the short "Main tweet", then add each language as a reply in the thread
 >
 > यहीं आपकी भूमिका है। आपका दान, मात्र ₹10 भी, इस पिरामिड को पूरा करने में मदद करेगा। कल कोई अनजान व्यक्ति इसके नीचे बैठकर आँखें मूँदेगा और शांति पाएगा, और उस शांति का एक हिस्सा आपका होगा। 🙏
 >
-> ─────────────
 > 📲 UPI: 6509092255@myapgb  (GPay / PhonePe / Paytm / BHIM)
 > 🏦 A/C 650910016995155 · IFSC UBIN00G7999 · Andhra Pradesh Grameena Bank
 > 🌐 https://madanapalle-pyramid.vercel.app
