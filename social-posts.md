@@ -21,6 +21,8 @@ Donation shortcuts to paste anywhere:
 >
 > See progress & donate 👇
 > https://madanapalle-pyramid.vercel.app
+>
+> #Madanapalle #Pyramid #Meditation
 
 **Reply 1 (thread):**
 
@@ -58,7 +60,11 @@ Donation shortcuts to paste anywhere:
 > 🏦 A/C: 650910016995155 · IFSC: UBIN00G7999 · Andhra Pradesh Grameena Bank, Madanapalle
 > 🧾 Account name: **Madanapalle Pyramid Spiritual Society**
 >
+> ☎️ Contacts — President J. Anuradha +91 92469 83035 · Vice President T. Venkataramana +91 99893 58319 · Treasurer Subramanyam +91 99898 59591
+>
 > Please give what your heart allows, and share this post so it reaches more kind souls. 🙏
+>
+> #Madanapalle #Pyramid #Meditation #Donate #AndhraPradesh #Seva
 
 ---
 
@@ -75,6 +81,8 @@ Donation shortcuts to paste anywhere:
 > 📲 *UPI:* `6509092255@myapgb`
 > 🏦 A/C 650910016995155 · IFSC UBIN00G7999
 > 🧾 Madanapalle Pyramid Spiritual Society
+>
+> ☎️ President J. Anuradha +91 92469 83035 · Treasurer Subramanyam +91 99898 59591
 >
 > Please donate and forward this to friends & family 🙏
 
