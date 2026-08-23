@@ -120,6 +120,70 @@ Donation shortcuts to paste anywhere:
 
 ---
 
+## 6. Instagram / WhatsApp caption
+
+Use the **square poster** (`donation-poster-square.png`) for Instagram feed & WhatsApp,
+and the **story poster** (`donation-poster-story.png`) for Instagram Story & WhatsApp Status.
+
+> 🔺 Help us complete a Meditation Pyramid in Madanapalle 🙏
+>
+> A family donated the land. Volunteers built the foundation, borewell & pillars. Now the funds are finished and the work has paused. Even ₹10 helps us finish it, and brings peace and a smile to many.
+>
+> 📲 UPI: 6509092255@myapgb
+> 🔗 madanapalle-pyramid.vercel.app (link in bio)
+> ☎️ President J. Anuradha +91 92469 83035
+>
+> #Madanapalle #Meditation #Pyramid #PyramidMeditation #Dhyana #Donate #Seva #Charity #AndhraPradesh #Annamayya #Spirituality #GiveBack
+
+---
+
+## 7. Consolidated heartfelt post, English + Telugu + Hindi together (one post)
+
+Best for Facebook, Telegram and WhatsApp (no length limit). On Twitter/X this fits a
+single post only with **X Premium** (long posts); on a normal account, attach a poster
+and post the short "Main tweet", then add each language as a reply in the thread.
+
+> 🔺 A Meditation Pyramid for Madanapalle, a dream that is now waiting for your hand 🙏
+>
+> **[English]**
+> Imagine a quiet place where anyone, rich or poor, young or old, can walk in, sit in silence, and feel their worries slowly melt away. For more than five years, the well-wishers of the Madanapalle Pyramid Spiritual Society have carried this dream in their hearts: a meditation pyramid where the whole community can come to find peace.
+>
+> We searched for land and knocked on many doors. When no help came, my parents, Sri J. Venkatarayappa Chetty and Smt. J. Anuradha, meditators for nearly 25 years, gave away 11,763 square feet of their own land, worth almost ₹1 crore, so that this dream could finally stand on solid ground.
+>
+> From there, hundreds of kind hearts gave whatever they could, nearly ₹18 lakh in all. Every single rupee became something real: the bhoomi pooja, the foundation, the borewell, the electricity, and the pillars now rising toward the sky. And then, with the pillars only half-raised, the money ran out. Today the work stands still, waiting.
+>
+> This is where you come in. Your gift, even ₹10, will help us lift this pyramid to completion. One day, someone you will never meet will sit beneath it, close their eyes, and find calm, and a part of that peace will be yours. 🙏
+>
+> **[తెలుగు]**
+> ధనవంతుడైనా, పేదవాడైనా, పిన్నలైనా, పెద్దలైనా, ఎవరైనా లోపలికి వచ్చి నిశ్శబ్దంగా కూర్చొని, తమ బాధలను మెల్లగా మరచిపోగలిగే ఒక ప్రశాంత స్థలాన్ని ఊహించండి. ఐదేళ్లకు పైగా మదనపల్లె పిరమిడ్ ఆధ్యాత్మిక సంఘ సభ్యులు ఈ కలను గుండెల్లో మోస్తున్నారు, సమాజం అంతా శాంతిని పొందగల ఒక ధ్యాన పిరమిడ్.
+>
+> స్థలం కోసం ఎన్నో తలుపులు తట్టాము. ఎవరూ ఆదుకోనప్పుడు, దాదాపు 25 ఏళ్లుగా ధ్యానం చేస్తున్న మా తల్లిదండ్రులు శ్రీ J. వెంకటరాయప్ప చెట్టి, శ్రీమతి J. అనూరాధ గారు తమ సొంత 11,763 చదరపు అడుగుల స్థలాన్ని (సుమారు ₹1 కోటి విలువ) దానం చేశారు.
+>
+> ఆ తర్వాత వందల మంది మంచి హృదయాలు తమకు చేతనైనంత ఇచ్చారు, మొత్తం సుమారు ₹18 లక్షలు. ప్రతి రూపాయి నిజమైన రూపం దాల్చింది: భూమి పూజ, పునాది, బోరుబావి, విద్యుత్, ఆకాశం వైపు లేస్తున్న స్తంభాలు. కానీ స్తంభాలు సగమే లేచేసరికి డబ్బు అయిపోయింది. ఈరోజు పని నిలిచిపోయి, మీ చేయూత కోసం ఎదురుచూస్తోంది.
+>
+> ఇక్కడే మీ పాత్ర ఉంది. మీ దానం, కేవలం ₹10 అయినా, ఈ పిరమిడ్‌ను పూర్తి చేయడంలో సహాయపడుతుంది. రేపు మీరు ఎప్పటికీ కలవని ఎవరో దీని కింద కూర్చొని కళ్లు మూసుకుని ప్రశాంతతను పొందుతారు, ఆ శాంతిలో ఒక భాగం మీది అవుతుంది. 🙏
+>
+> **[हिन्दी]**
+> एक ऐसी शांत जगह की कल्पना कीजिए जहाँ अमीर हो या ग़रीब, बच्चा हो या बुज़ुर्ग, कोई भी अंदर आकर मौन में बैठे और अपनी चिंताओं को धीरे-धीरे पिघलते हुए महसूस करे। पाँच वर्षों से भी अधिक समय से मदनपल्ले पिरामिड आध्यात्मिक समिति के सदस्य यह सपना अपने दिल में सँजोए हुए हैं, एक ध्यान पिरामिड जहाँ पूरा समाज आकर शांति पा सके।
+>
+> हमने ज़मीन के लिए कई दरवाज़े खटखटाए। जब कोई मदद नहीं मिली, तो लगभग 25 वर्षों से ध्यान कर रहे मेरे माता-पिता, श्री J. वेंकटरायप्पा चेट्टी और श्रीमती J. अनुराधा ने अपनी 11,763 वर्ग फुट भूमि (लगभग ₹1 करोड़ मूल्य) दान कर दी।
+>
+> इसके बाद सैकड़ों दयालु हृदयों ने जो बन पड़ा दिया, कुल मिलाकर लगभग ₹18 लाख। हर एक रुपया कुछ सच्चा बन गया: भूमि पूजा, नींव, बोरवेल, बिजली, और आकाश की ओर उठते खंभे। पर खंभे आधे ही उठे थे कि पैसा समाप्त हो गया। आज काम रुका हुआ है, आपकी प्रतीक्षा में।
+>
+> यहीं आपकी भूमिका है। आपका दान, मात्र ₹10 भी, इस पिरामिड को पूरा करने में मदद करेगा। कल कोई अनजान व्यक्ति इसके नीचे बैठकर आँखें मूँदेगा और शांति पाएगा, और उस शांति का एक हिस्सा आपका होगा। 🙏
+>
+> ─────────────
+> 📲 UPI: 6509092255@myapgb  (GPay / PhonePe / Paytm / BHIM)
+> 🏦 A/C 650910016995155 · IFSC UBIN00G7999 · Andhra Pradesh Grameena Bank
+> 🌐 https://madanapalle-pyramid.vercel.app
+> ☎️ President J. Anuradha +91 92469 83035 · Treasurer Subramanyam +91 99898 59591
+>
+> Please give what your heart allows, and share this so it reaches more kind souls. 🙏
+>
+> #Madanapalle #Meditation #Pyramid #PyramidMeditation #Dhyana #Donate #Seva #AndhraPradesh #Annamayya
+
+---
+
 ### Posting tips
 - Attach 2-3 of the best photos (team photo, pillar work, land pooja) to the Facebook and
   Twitter posts, posts with images get far more reach.
