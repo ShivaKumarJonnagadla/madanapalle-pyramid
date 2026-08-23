@@ -1,6 +1,6 @@
 # Social media posts — Madanapalle Meditation Pyramid
 
-Replace `https://madanapalle-pyramid.vercel.app` with your live website URL (from Vercel) before posting.
+The live website URL (https://madanapalle-pyramid.vercel.app) is already filled in below.
 Keep the UPI ID and account name exactly as written.
 
 Donation shortcuts to paste anywhere:
