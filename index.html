@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Madanapalle Meditation Pyramid</title>
+<meta name="description" content="Help complete a meditation pyramid for the wellbeing of the Madanapalle community. Land donated, foundation begun — now we need support to finish." />
+<meta property="og:title" content="Madanapalle Meditation Pyramid — Help Us Complete It" />
+<meta property="og:description" content="Land donated, foundation and pillars begun, funds fully used. Even ₹10 helps us resume construction. Every rupee accounted for." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/img/pillars-1.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ground:#F7F2E9;
+    --card:#FFFDF7;
+    --ink:#221C2E;
+    --muted:#6E6579;
+    --line:#E7DECF;
+    --accent:#C0800A;
+    --accent-soft:#F3E4C2;
+    --indigo:#221C4E;
+    --indigo-2:#3E2A63;
+    --good:#2F7D4F;
+    --warn:#B5560E;
+    --shadow:0 1px 2px rgba(34,28,46,.06),0 8px 30px rgba(34,28,46,.07);
+    --maxw:64rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#151120;
+      --card:#1F1930;
+      --ink:#F1EBDD;
+      --muted:#A99FB6;
+      --line:#332A45;
+      --accent:#F0B12E;
+      --accent-soft:#3A2E1A;
+      --indigo:#191338;
+      --indigo-2:#33215A;
+      --good:#6FCB93;
+      --warn:#F0A44E;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#151120;
+    --card:#1F1930;
+    --ink:#F1EBDD;
+    --muted:#A99FB6;
+    --line:#332A45;
+    --accent:#F0B12E;
+    --accent-soft:#3A2E1A;
+    --indigo:#191338;
+    --indigo-2:#33215A;
+    --good:#6FCB93;
+    --warn:#F0A44E;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.4);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"Mukta","Noto Sans Devanagari",system-ui,sans-serif;
+    font-size:1.06rem;
+    line-height:1.7;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.4rem}
+  .narrow{max-width:44rem}
+  h1,h2,h3{font-family:"Marcellus",Georgia,serif;font-weight:400;text-wrap:balance;line-height:1.15;letter-spacing:.01em}
+  h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 .2em}
+  h3{font-size:1.25rem;margin:0 0 .3em}
+  p{margin:0 0 1rem}
+  a{color:var(--accent);text-underline-offset:3px}
+  .eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+  .tel{font-family:"Noto Sans Telugu","Mukta",sans-serif}
+  .hin{font-family:"Noto Sans Devanagari","Mukta",sans-serif}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(120% 90% at 50% 118%, rgba(240,177,46,.32), transparent 55%),
+      linear-gradient(180deg, var(--indigo) 0%, var(--indigo-2) 100%);
+    color:#F4EEE2;
+    overflow:hidden;
+    isolation:isolate;
+    text-align:center;
+    padding:3.4rem 1.4rem 3rem;
+  }
+  .hero .sky{position:absolute;inset:0;z-index:-1;width:100%;height:100%;display:block}
+  .hero .eyebrow{color:#F2C871}
+  .hero h1{
+    font-family:"Marcellus",Georgia,serif;
+    font-size:clamp(2.2rem,6.4vw,4rem);
+    margin:.5rem 0 .1rem;
+    color:#FBF6EC;
+    text-shadow:0 1px 20px rgba(0,0,0,.25);
+  }
+  .hero .sub-scripts{font-size:clamp(1.1rem,3.2vw,1.5rem);color:#E9D6A8;margin:.1rem 0 1rem;line-height:1.5}
+  .hero .lede{max-width:40rem;margin:0 auto 1.7rem;color:#EDE6D6;font-size:1.1rem}
+  .btnrow{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.85rem 1.5rem;border-radius:999px;
+    font-weight:600;font-size:1rem;text-decoration:none;
+    border:1px solid transparent;transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{background:linear-gradient(180deg,#F3C25A,#D99A17);color:#2B1E05;box-shadow:0 8px 24px rgba(217,154,23,.4)}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#F4EEE2;border-color:rgba(255,255,255,.35)}
+  .btn-ghost:hover{background:rgba(255,255,255,.16)}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:3.4rem 0}
+  .divider{display:flex;align-items:center;justify-content:center;gap:1rem;color:var(--accent);margin:0 auto;max-width:var(--maxw)}
+  .divider svg{width:22px;height:22px;flex:none}
+  .divider::before,.divider::after{content:"";height:1px;background:var(--line);flex:1;max-width:9rem}
+
+  .kicker{text-align:center;margin-bottom:1.6rem}
+  .kicker h2{margin-top:.35rem}
+
+  /* appeal cards (trilingual) */
+  .appeal-grid{display:grid;gap:1rem;grid-template-columns:1fr}
+  @media(min-width:820px){.appeal-grid{grid-template-columns:repeat(3,1fr)}}
+  .lang-card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:1.4rem 1.3rem;box-shadow:var(--shadow);
+  }
+  .lang-card .tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;display:block;margin-bottom:.5rem}
+  .lang-card p{font-size:1rem;color:var(--ink);margin-bottom:0}
+
+  /* ledger */
+  .ledger{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+  .ledger .head{padding:1.2rem 1.4rem;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:baseline;justify-content:space-between}
+  .ledger table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+  .ledger td,.ledger th{padding:.85rem 1.4rem;text-align:left;border-bottom:1px solid var(--line)}
+  .ledger th{font-family:"Marcellus",serif;font-weight:400;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .ledger td.amt,.ledger th.amt{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .ledger tr:last-child td{border-bottom:none}
+  .ledger .item small{display:block;color:var(--muted);font-size:.82rem;letter-spacing:0}
+  .ledger .donated{color:var(--good);font-weight:600}
+  .ledger .subtotal td{background:color-mix(in srgb,var(--accent-soft) 55%,transparent);font-weight:700}
+  .pill{display:inline-flex;align-items:center;gap:.4rem;padding:.28rem .7rem;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.02em}
+  .pill.raised{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+  .pill.paused{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+  .ledger-note{color:var(--muted);font-size:.9rem;margin:.9rem .2rem 0;text-align:center}
+
+  /* stat row */
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.6rem}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.1rem;text-align:center;box-shadow:var(--shadow)}
+  .stat .n{font-family:"Marcellus",serif;font-size:1.7rem;color:var(--accent);display:block;line-height:1.1}
+  .stat .l{font-size:.82rem;color:var(--muted);letter-spacing:.04em}
+
+  /* journey */
+  .journey{display:grid;gap:1.4rem;grid-template-columns:1fr}
+  @media(min-width:720px){.journey{grid-template-columns:1fr 1fr}}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .stage .media{position:relative;aspect-ratio:4/3;background:#0d0b16;overflow:hidden}
+  .stage .media img,.stage .media video{width:100%;height:100%;object-fit:cover;display:block}
+  .stage .body{padding:1.15rem 1.25rem 1.35rem}
+  .stage .step{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .stage h3{margin:.25rem 0 .35rem}
+  .stage p{font-size:.96rem;color:var(--muted);margin:0}
+  .stage .tel{display:block;margin-top:.4rem;color:var(--ink);font-size:.92rem}
+  .vids{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.9rem}
+  .vids video{width:100%;border-radius:10px;background:#0d0b16;border:1px solid var(--line)}
+  figure{margin:0}
+
+  .full-media{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .full-media img{width:100%;display:block}
+  .caption{color:var(--muted);font-size:.9rem;text-align:center;margin-top:.7rem}
+
+  /* donate */
+  .donate{background:linear-gradient(180deg,var(--indigo),var(--indigo-2));color:#F4EEE2;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+  .donate-inner{display:grid;grid-template-columns:1fr;gap:0}
+  @media(min-width:820px){.donate-inner{grid-template-columns:1.05fr .95fr}}
+  .donate .pitch{padding:2rem 1.8rem}
+  .donate .pitch h2{color:#FBF6EC}
+  .donate .pitch p{color:#E7DEC9}
+  .donate .pitch .big{font-family:"Marcellus",serif;font-size:1.35rem;color:#F2C871;margin:.3rem 0 1rem}
+  .qr-panel{background:rgba(255,255,255,.06);padding:2rem 1.8rem;display:flex;flex-direction:column;align-items:center;justify-content:center;border-left:1px solid rgba(255,255,255,.1)}
+  .qr-card{background:#fff;border-radius:16px;padding:.8rem;box-shadow:0 12px 30px rgba(0,0,0,.35);max-width:230px}
+  .qr-card img{width:100%;display:block;border-radius:8px}
+  .upi-id{margin-top:1rem;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:.55rem .8rem;display:flex;align-items:center;gap:.6rem;font-weight:600}
+  .upi-id code{font-family:"Mukta",monospace;font-size:1rem;color:#FBEFD3;letter-spacing:.02em}
+  .copybtn{background:#F3C25A;color:#2B1E05;border:none;border-radius:7px;padding:.3rem .6rem;font-weight:700;cursor:pointer;font-size:.8rem}
+  .copybtn:active{transform:scale(.96)}
+  .apps{color:#C9BEA6;font-size:.8rem;margin-top:.7rem;letter-spacing:.04em}
+
+  .bank{margin-top:1.6rem;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+  .bank .bhead{padding:1rem 1.3rem;border-bottom:1px solid var(--line);font-family:"Marcellus",serif;font-size:1.05rem}
+  .bank dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:0}
+  .bank dt{padding:.7rem 1.3rem;color:var(--muted);font-size:.9rem;border-bottom:1px solid var(--line)}
+  .bank dd{padding:.7rem 1.3rem;margin:0;font-weight:600;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;word-break:break-word}
+  .bank .row-last dt,.bank .row-last dd{border-bottom:none}
+  .bank-note{font-size:.82rem;color:var(--muted);padding:.8rem 1.3rem;background:color-mix(in srgb,var(--accent-soft) 40%,transparent)}
+
+  /* team */
+  .team-photo img{width:100%;display:block;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .family{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:1.3rem 1.4rem;box-shadow:var(--shadow);margin-top:1.4rem}
+  .family strong{color:var(--accent)}
+
+  footer{background:var(--indigo);color:#CFC6DC;padding:2.4rem 1.4rem;text-align:center}
+  footer .fname{font-family:"Marcellus",serif;font-size:1.2rem;color:#F2C871}
+  footer p{margin:.4rem 0;font-size:.92rem}
+  footer .disc{font-size:.78rem;color:#8B84A0;max-width:40rem;margin:1rem auto 0;line-height:1.6}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .btn:hover{transform:none}
+  }
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="sky" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#FFE7A6" stop-opacity="1"/>
+        <stop offset="35%" stop-color="#F6C455" stop-opacity=".9"/>
+        <stop offset="100%" stop-color="#F6C455" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="pyr" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F7D488"/>
+        <stop offset="100%" stop-color="#B8781A"/>
+      </linearGradient>
+      <linearGradient id="pyrShade" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#8A5A16"/>
+        <stop offset="100%" stop-color="#5E3C10"/>
+      </linearGradient>
+    </defs>
+    <circle cx="600" cy="300" r="230" fill="url(#sun)"/>
+    <g opacity=".9">
+      <polygon points="600,150 470,430 600,430" fill="url(#pyr)"/>
+      <polygon points="600,150 730,430 600,430" fill="url(#pyrShade)"/>
+      <line x1="536" y1="290" x2="664" y2="290" stroke="#00000022" stroke-width="2"/>
+      <line x1="514" y1="337" x2="686" y2="337" stroke="#00000022" stroke-width="2"/>
+      <line x1="492" y1="384" x2="708" y2="384" stroke="#00000022" stroke-width="2"/>
+      <polygon points="600,150 588,178 612,178" fill="#FFF3D0"/>
+    </g>
+    <rect x="0" y="430" width="1200" height="90" fill="#00000026"/>
+  </svg>
+
+  <div class="wrap">
+    <span class="eyebrow">Madanapalle &middot; Annamayya District &middot; Andhra Pradesh</span>
+    <h1>A Meditation Pyramid<br />for Everyone</h1>
+    <div class="sub-scripts">
+      <span class="tel">ధ్యాన పిరమిడ్ నిర్మాణం</span> &nbsp;•&nbsp; <span class="hin">ध्यान पिरामिड निर्माण</span>
+    </div>
+    <p class="lede">The land is donated. The foundation is laid, the borewell dug, the pillars begun. The funds are now fully used — and the work has paused. With your help, even ₹10, we can finish it for the whole community.</p>
+    <div class="btnrow">
+      <a class="btn btn-gold" href="#donate">♡ Donate Now</a>
+      <a class="btn btn-ghost" href="#journey">See the Progress</a>
+    </div>
+  </div>
+</header>
+
+<!-- APPEAL / WHY -->
+<section id="story">
+  <div class="wrap narrow">
+    <div class="kicker">
+      <span class="eyebrow">Why we are asking</span>
+      <h2>A dream of five years, standing half-built</h2>
+    </div>
+    <p>For over five years, the well-wishers of the <strong>Madanapalle Pyramid Spiritual Society</strong> have dreamed of building a meditation pyramid — a calm, open space where anyone, of any background, can sit, breathe, and find peace. Pyramid meditation has helped thousands across our region; we wanted to bring that gift home to Madanapalle.</p>
+    <p>In <strong>August 2024</strong> we formed a team and began searching for land. We approached government officials for a donation of land, but no help came. When every door seemed closed, one family opened theirs.</p>
+    <p>My parents, <strong>Sri J. Venkatarayappa Chetty</strong> and <strong>Smt. J. Anuradha</strong> — meditators for nearly 25 years — donated <strong>11,763 square feet</strong> of their own land, worth about ₹1 crore, so that the pyramid could finally begin. The registration was completed on <strong>5 November 2024</strong>.</p>
+    <p>Since then, spiritual well-wishers in and around Madanapalle have given from their hearts — around <strong>₹18,00,000</strong> in all. Every rupee has gone into the ground: the pooja, the foundation, the borewell, the electricity, the culvert, and the pillars you will see below. <strong>That money is now finished, and construction has stopped.</strong> This is our appeal to the wider world to help us carry it forward.</p>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 22 21H2L12 3Z"/></svg>
+</div>
+
+<!-- TRILINGUAL APPEAL -->
+<section id="appeal">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">In your language &middot; మీ భాషలో &middot; आपकी भाषा में</span>
+      <h2>Even ₹10 brings a smile</h2>
+    </div>
+    <div class="appeal-grid">
+      <div class="lang-card">
+        <span class="tag">English</span>
+        <p>We are building a meditation pyramid in Madanapalle for the wellbeing of society. A family donated the land; well-wishers built the foundation and pillars. The funds are now used up. Please help us finish — even ₹10 will bring peace and a smile to many.</p>
+      </div>
+      <div class="lang-card">
+        <span class="tag">తెలుగు</span>
+        <p class="tel">మదనపల్లెలో సమాజ శ్రేయస్సు కోసం ఒక ధ్యాన పిరమిడ్ నిర్మిస్తున్నాము. ఒక కుటుంబం స్థలాన్ని దానం చేసింది; భక్తులు పునాది, స్తంభాలు నిర్మించారు. ఇప్పుడు నిధులు పూర్తిగా అయిపోయాయి. దయచేసి పూర్తి చేయడంలో సహాయం చేయండి — కేవలం ₹10 దానం కూడా ఎందరికో శాంతిని, నవ్వును పంచుతుంది.</p>
+      </div>
+      <div class="lang-card">
+        <span class="tag">हिन्दी</span>
+        <p class="hin">हम मदनपल्ले में समाज के कल्याण हेतु एक ध्यान पिरामिड बना रहे हैं। एक परिवार ने भूमि दान की; श्रद्धालुओं ने नींव और खंभे बनाए। अब धनराशि समाप्त हो चुकी है। कृपया इसे पूरा करने में सहयोग करें — मात्र ₹10 का दान भी अनेक लोगों के चेहरे पर मुस्कान और शांति लाएगा।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEDGER / TRANSPARENCY -->
+<section id="transparency">
+  <div class="wrap narrow">
+    <div class="kicker">
+      <span class="eyebrow">Every rupee accounted for</span>
+      <h2>Where the money has gone</h2>
+    </div>
+    <div class="ledger">
+      <div class="head">
+        <span class="pill raised">● Raised so far ≈ ₹18,00,000</span>
+        <span class="pill paused">● Work paused — funds finished</span>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Contribution / Work</th><th class="amt">Value (₹)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item">Land — 11,763 sq ft <small>Donated in kind by the family</small></td>
+            <td class="amt donated">1,00,00,000<br><small>donated</small></td>
+          </tr>
+          <tr><td class="item">Land registration</td><td class="amt">1,10,000</td></tr>
+          <tr><td class="item">Borewell</td><td class="amt">1,03,138</td></tr>
+          <tr><td class="item">Shed</td><td class="amt">2,00,000</td></tr>
+          <tr><td class="item">Electricity connection</td><td class="amt">4,00,000</td></tr>
+          <tr><td class="item">Culvert</td><td class="amt">1,20,000</td></tr>
+          <tr><td class="item">Pillar work</td><td class="amt">12,00,000</td></tr>
+          <tr class="subtotal"><td>Total invested so far <small style="font-weight:400">(excluding donated land)</small></td><td class="amt">21,33,138</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ledger-note">Land valued at ₹1 crore was donated by the family. Beyond that, more than ₹21 lakh has already been put into the work — funded by community donations and the family's own support. Nothing remains to continue.</p>
+
+    <div class="stats">
+      <div class="stat"><span class="n">11,763</span><span class="l">sq ft donated</span></div>
+      <div class="stat"><span class="n">₹1 Cr</span><span class="l">land value, gifted</span></div>
+      <div class="stat"><span class="n">5 Nov 2024</span><span class="l">registered</span></div>
+      <div class="stat"><span class="n">₹10+</span><span class="l">every gift helps</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 22 21H2L12 3Z"/></svg>
+</div>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">The journey so far</span>
+      <h2>Built with faith and folded hands</h2>
+    </div>
+    <div class="journey">
+
+      <article class="stage reveal">
+        <div class="media"><img src="assets/img/pooja-1.jpg" alt="Land pooja on the pyramid site with the community gathered" loading="lazy" /></div>
+        <div class="body">
+          <span class="step">Stage 01</span>
+          <h3>Bhoomi Pooja</h3>
+          <p>The community gathered on the donated land to offer prayers and break ground for the pyramid.</p>
+          <span class="tel">భూమి పూజ</span>
+          <div class="vids"><video src="assets/video/pooja-1.mp4" controls preload="none" playsinline></video></div>
+        </div>
+      </article>
+
+      <article class="stage reveal">
+        <div class="media"><img src="assets/img/foundation-1.jpg" alt="JCB machine clearing and levelling the land for the foundation" loading="lazy" /></div>
+        <div class="body">
+          <span class="step">Stage 02</span>
+          <h3>Foundation Work</h3>
+          <p>Earth-movers cleared and levelled the ground against the backdrop of the Madanapalle hills, and the foundation was dug.</p>
+          <span class="tel">పునాది పనులు</span>
+          <div class="vids">
+            <video src="assets/video/foundation-1.mp4" controls preload="none" playsinline></video>
+            <video src="assets/video/foundation-2.mp4" controls preload="none" playsinline></video>
+          </div>
+        </div>
+      </article>
+
+      <article class="stage reveal">
+        <div class="media"><img src="assets/img/borewell-1.jpg" alt="Borewell drilling at the pyramid site" loading="lazy" /></div>
+        <div class="body">
+          <span class="step">Stage 03</span>
+          <h3>Borewell</h3>
+          <p>A borewell was dug to bring water to the site — essential for construction and for the meditators who will come.</p>
+          <span class="tel">బోరుబావి</span>
+          <div class="vids"><video src="assets/video/borewell-1.mp4" controls preload="none" playsinline></video></div>
+        </div>
+      </article>
+
+      <article class="stage reveal">
+        <div class="media"><img src="assets/img/electricity-1.jpg" alt="Electricity poles and connection work at the site" loading="lazy" /></div>
+        <div class="body">
+          <span class="step">Stage 04</span>
+          <h3>Electricity</h3>
+          <p>Poles were raised and a power connection was brought to the site to support the construction ahead.</p>
+          <span class="tel">విద్యుత్ సౌకర్యం</span>
+          <div class="vids"><video src="assets/video/electricity-1.mp4" controls preload="none" playsinline></video></div>
+        </div>
+      </article>
+
+      <article class="stage reveal">
+        <div class="media"><img src="assets/img/pillars-1.jpg" alt="Pillar construction work at the pyramid site" loading="lazy" /></div>
+        <div class="body">
+          <span class="step">Stage 05</span>
+          <h3>Pillar Work</h3>
+          <p>Granite, steel and timber were gathered and the pillars — the frame that will carry the pyramid — were started. This is where the work now stands.</p>
+          <span class="tel">స్తంభాల నిర్మాణం</span>
+          <div class="vids">
+            <video src="assets/video/pillars-1.mp4" controls preload="none" playsinline></video>
+            <video src="assets/video/pillars-2.mp4" controls preload="none" playsinline></video>
+          </div>
+        </div>
+      </article>
+
+      <article class="stage reveal">
+        <div class="media"><img src="assets/img/pillars-3.jpg" alt="Construction materials — granite aggregate and timber poles — on the site" loading="lazy" /></div>
+        <div class="body">
+          <span class="step">Materials on site</span>
+          <h3>Ready to Resume</h3>
+          <p>Aggregate, poles and steel are on the ground, waiting. Everything is in place to continue the moment funds allow.</p>
+          <span class="tel">నిర్మాణ సామగ్రి సిద్ధంగా ఉంది</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="wrap narrow">
+    <div class="kicker">
+      <span class="eyebrow">The people behind it</span>
+      <h2>The Madanapalle Pyramid Spiritual Team</h2>
+    </div>
+    <figure class="team-photo reveal">
+      <img src="assets/img/team.jpg" alt="Members of the Madanapalle Pyramid Spiritual Society standing together at the site" loading="lazy" />
+      <figcaption class="caption">The volunteers and well-wishers who have carried this dream from an idea to a foundation.</figcaption>
+    </figure>
+    <div class="family">
+      <p style="margin:0">The land beneath this pyramid was donated by <strong>Sri J. Venkatarayappa Chetty</strong> and <strong>Smt. J. Anuradha</strong> — meditators of nearly 25 years — who gave 11,763 sq ft of their own land so the community could have a place to find peace.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 22 21H2L12 3Z"/></svg>
+</div>
+
+<!-- DONATE -->
+<section id="donate">
+  <div class="wrap">
+    <div class="donate">
+      <div class="donate-inner">
+        <div class="pitch">
+          <span class="eyebrow" style="color:#F2C871">Your gift completes it</span>
+          <h2>Give what your heart allows</h2>
+          <p class="big">Even ₹10 will make many people smile.</p>
+          <p>Scan the UPI QR code, or use the bank details below. Every contribution goes directly to the Madanapalle Pyramid Spiritual Society's account and into finishing the pyramid.</p>
+          <p class="tel" style="color:#E7DEC9">కేవలం ₹10 దానం కూడా ఎందరికో నవ్వును పంచుతుంది. దయచేసి QR స్కాన్ చేసి లేదా బ్యాంకు వివరాలతో సహాయం చేయండి.</p>
+          <p class="hin" style="color:#E7DEC9;margin-bottom:0">मात्र ₹10 का दान भी अनेक चेहरों पर मुस्कान लाएगा। कृपया QR स्कैन करें या बैंक विवरण से सहयोग करें।</p>
+        </div>
+        <div class="qr-panel">
+          <div class="qr-card">
+            <img src="assets/img/upi-qr.jpg" alt="BHIM UPI QR code for Madanapalle Pyramid Spiritual Society" />
+          </div>
+          <div class="upi-id">
+            <code id="upi">6509092255@myapgb</code>
+            <button class="copybtn" data-copy="6509092255@myapgb" type="button">Copy</button>
+          </div>
+          <div class="apps">Google Pay &middot; PhonePe &middot; Paytm &middot; BHIM</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap narrow" style="padding:0">
+      <div class="bank">
+        <div class="bhead">Bank transfer details</div>
+        <dl>
+          <dt>Account name</dt><dd>Madanapalle Pyramid Spiritual Society</dd>
+          <dt>Account number</dt><dd>650910016995155 <button class="copybtn" data-copy="650910016995155" type="button" style="margin-left:.5rem">Copy</button></dd>
+          <dt>IFSC code</dt><dd>UBIN00G7999</dd>
+          <dt>Bank</dt><dd>Andhra Pradesh Grameena Bank</dd>
+          <dt>Branch</dt><dd>Madanapalle</dd>
+          <dt class="">UPI ID</dt><dd class="">6509092255@myapgb</dd>
+        </dl>
+        <div class="bank-note">Please confirm the account name reads <strong>Madanapalle Pyramid Spiritual Society</strong> in your app before sending. For an 80G / donation receipt, contact the society.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="fname">Madanapalle Pyramid Spiritual Society</p>
+  <p>Madanapalle, Annamayya District, Andhra Pradesh &ndash; 517325, India</p>
+  <p>ధ్యానం సమాజ శ్రేయస్సు కోసం &middot; Meditation for the wellbeing of all</p>
+  <p class="disc">This is a community fundraising appeal by the Madanapalle Pyramid Spiritual Society and its well-wishers. Photographs and figures shown are from the ongoing construction. Please give only what you can, and always verify the account name before transferring.</p>
+</footer>
+
+<script>
+  // Copy buttons
+  document.querySelectorAll(".copybtn").forEach(function(b){
+    b.addEventListener("click",function(){
+      var t=b.getAttribute("data-copy");
+      navigator.clipboard.writeText(t).then(function(){
+        var o=b.textContent; b.textContent="Copied ✓";
+        setTimeout(function(){b.textContent=o;},1600);
+      }).catch(function(){});
+    });
+  });
+  // Reveal on scroll
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
