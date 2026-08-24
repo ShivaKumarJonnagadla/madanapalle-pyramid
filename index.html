@@ -224,6 +224,45 @@
   .contact-card .cnum{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;margin-top:.2rem}
   .contact-card .cnum::before{content:"📞 ";}
 
+  /* donate modal */
+  .modal-overlay{position:fixed;inset:0;background:rgba(18,13,32,.68);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:1.2rem;z-index:1000;opacity:0;transition:opacity .2s ease}
+  .modal-overlay[hidden]{display:none}
+  .modal-overlay.show{opacity:1}
+  .modal{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);width:100%;max-width:26rem;padding:1.7rem 1.6rem;position:relative;max-height:92vh;overflow-y:auto}
+  .modal-close{position:absolute;top:.6rem;right:.9rem;background:none;border:none;font-size:1.8rem;line-height:1;color:var(--muted);cursor:pointer;padding:.2rem .4rem}
+  .dm-step h3{font-family:"Marcellus",serif;font-weight:400;font-size:1.45rem;margin:.1rem 0 .3rem}
+  .dm-sub{color:var(--muted);font-size:.95rem;margin:0 0 1.1rem}
+  .dm-choice{display:flex;align-items:center;gap:.95rem;width:100%;text-align:left;background:var(--ground);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin-bottom:.7rem;cursor:pointer;transition:transform .12s ease,border-color .12s ease;color:var(--ink);font-family:inherit}
+  .dm-choice:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .dm-ic{font-size:1.7rem;flex:none;line-height:1}
+  .dm-choice strong{display:block;font-size:1.06rem}
+  .dm-choice small{color:var(--muted);font-size:.82rem}
+  .dm-back{background:none;border:none;color:var(--accent);font-weight:600;cursor:pointer;padding:0;margin:0 0 .8rem;font-size:.9rem;font-family:inherit}
+  .amt-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.1rem 0 .8rem}
+  .amt-chips button{flex:1 1 auto;min-width:3.6rem;padding:.55rem .3rem;border-radius:10px;border:1px solid var(--line);background:var(--ground);color:var(--ink);font-weight:600;cursor:pointer;font-variant-numeric:tabular-nums;font-family:inherit;font-size:.95rem}
+  .amt-chips button.active{background:var(--accent);color:#2b1e05;border-color:var(--accent)}
+  .dm-amount-wrap{display:flex;align-items:center;gap:.4rem;border:1px solid var(--line);border-radius:12px;padding:0 .9rem;margin-bottom:.7rem;background:var(--ground)}
+  .dm-amount-wrap span{font-size:1.35rem;color:var(--muted)}
+  #dmAmount{border:none;background:none;font-size:1.4rem;font-weight:700;color:var(--ink);width:100%;padding:.55rem 0;outline:none;font-variant-numeric:tabular-nums;font-family:inherit}
+  .dm-err{color:var(--warn);font-size:.85rem;margin:0 0 .5rem;min-height:1.1em}
+  .dm-label{font-size:.86rem;color:var(--muted);margin:.2rem 0 .5rem}
+  .apps-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+  .app-btn{display:flex;align-items:center;gap:.55rem;padding:.7rem .75rem;border-radius:12px;border:1px solid var(--line);background:var(--ground);color:var(--ink);font-weight:600;cursor:pointer;transition:transform .12s ease,border-color .12s ease;font-family:inherit;font-size:.95rem}
+  .app-btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .app-btn .dot{width:26px;height:26px;border-radius:7px;flex:none;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;color:#fff}
+  .app-any{grid-column:1 / -1;justify-content:center}
+  .dm-hint{color:var(--muted);font-size:.82rem;margin:1rem 0 0;line-height:1.55}
+  .dm-qr{width:188px;margin:.3rem auto .7rem;background:#fff;padding:.6rem;border-radius:12px}
+  .dm-qr img{width:100%;display:block;border-radius:6px}
+  .dm-amt-badge{text-align:center;font-family:"Marcellus",serif;font-size:1.7rem;color:var(--accent);margin:.1rem 0 .3rem}
+  .copy-row{display:flex;align-items:center;justify-content:space-between;gap:.6rem;background:var(--ground);border:1px solid var(--line);border-radius:10px;padding:.45rem .5rem .45rem .9rem;margin:.5rem 0}
+  .copy-row code{font-weight:700;font-family:inherit}
+  .bank-dl{margin:.3rem 0 0}
+  .bank-dl .brow{display:flex;justify-content:space-between;gap:.8rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+  .bank-dl .brow:last-child{border-bottom:none}
+  .bank-dl .k{color:var(--muted);font-size:.85rem;flex:none}
+  .bank-dl .v{font-weight:700;text-align:right;font-variant-numeric:tabular-nums;word-break:break-word}
+
   footer{background:var(--indigo);color:#CFC6DC;padding:2.4rem 1.4rem;text-align:center}
   footer .fname{font-family:"Marcellus",serif;font-size:1.2rem;color:#F2C871}
   footer p{margin:.4rem 0;font-size:.92rem}
@@ -278,7 +317,7 @@
     </div>
     <p class="lede">The land is donated. The foundation is laid, the borewell dug, the pillars begun. The funds are now fully used, and the work has paused. With your help, even ₹10, we can finish it for the whole community.</p>
     <div class="btnrow">
-      <a class="btn btn-gold" href="#donate">♡ Donate Now</a>
+      <a class="btn btn-gold" href="#donate" data-donate>♡ Donate Now</a>
       <a class="btn btn-ghost" href="#journey">See the Progress</a>
     </div>
   </div>
@@ -487,6 +526,7 @@
           <h2>Give what your heart allows</h2>
           <p class="big">Even ₹10 will make many people smile.</p>
           <p>Scan the UPI QR code, or use the bank details below. Every contribution goes directly to the Madanapalle Pyramid Spiritual Society's account and into finishing the pyramid.</p>
+          <p style="margin:.2rem 0 1.1rem"><button class="btn btn-gold" type="button" data-donate style="width:auto">♡ Donate an amount now</button></p>
           <p class="tel" style="color:#E7DEC9">కేవలం ₹10 దానం కూడా ఎందరికో నవ్వును పంచుతుంది. దయచేసి QR స్కాన్ చేసి లేదా బ్యాంకు వివరాలతో సహాయం చేయండి.</p>
           <p class="hin" style="color:#E7DEC9;margin-bottom:0">मात्र ₹10 का दान भी अनेक चेहरों पर मुस्कान लाएगा। कृपया QR स्कैन करें या बैंक विवरण से सहयोग करें।</p>
         </div>
@@ -554,6 +594,73 @@
   <p class="disc">This is a community fundraising appeal by the Madanapalle Pyramid Spiritual Society and its well-wishers. Photographs and figures shown are from the ongoing construction. Please give only what you can, and always verify the account name before transferring.</p>
 </footer>
 
+<!-- DONATE MODAL -->
+<div class="modal-overlay" id="donateModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="dmTitle">
+    <button class="modal-close" type="button" aria-label="Close">&times;</button>
+
+    <div class="dm-step" data-step="method">
+      <h3 id="dmTitle">Make a Donation</h3>
+      <p class="dm-sub">Even ₹10 helps us complete the pyramid. How would you like to give?</p>
+      <button class="dm-choice" type="button" data-goto="upi-amount">
+        <span class="dm-ic">📲</span>
+        <span><strong>Pay via UPI</strong><small>Google Pay, PhonePe, Paytm, BHIM</small></span>
+      </button>
+      <button class="dm-choice" type="button" data-goto="bank">
+        <span class="dm-ic">🏦</span>
+        <span><strong>Bank Transfer</strong><small>Account number &amp; IFSC</small></span>
+      </button>
+    </div>
+
+    <div class="dm-step" data-step="upi-amount" hidden>
+      <button class="dm-back" type="button" data-goto="method">&larr; Back</button>
+      <h3>Pay via UPI</h3>
+      <p class="dm-sub">Choose an amount, then your app.</p>
+      <div class="amt-chips">
+        <button type="button" data-amt="10">₹10</button>
+        <button type="button" data-amt="51">₹51</button>
+        <button type="button" data-amt="101">₹101</button>
+        <button type="button" data-amt="501">₹501</button>
+        <button type="button" data-amt="1001">₹1001</button>
+      </div>
+      <div class="dm-amount-wrap"><span>₹</span><input id="dmAmount" type="number" min="1" step="1" inputmode="numeric" placeholder="Enter amount" aria-label="Donation amount in rupees" /></div>
+      <div class="dm-err" role="alert"></div>
+      <p class="dm-label">Choose your app:</p>
+      <div class="apps-grid">
+        <button class="app-btn" type="button" data-app="gpay"><span class="dot" style="background:#4285F4">G</span> Google Pay</button>
+        <button class="app-btn" type="button" data-app="phonepe"><span class="dot" style="background:#5F259F">P</span> PhonePe</button>
+        <button class="app-btn" type="button" data-app="paytm"><span class="dot" style="background:#00BAF2">P</span> Paytm</button>
+        <button class="app-btn" type="button" data-app="bhim"><span class="dot" style="background:#F26522">B</span> BHIM</button>
+        <button class="app-btn app-any" type="button" data-app="any">Any other UPI app</button>
+      </div>
+      <p class="dm-hint">On your phone, the app opens with the amount already filled in. On a computer, scan the QR on the next screen.</p>
+    </div>
+
+    <div class="dm-step" data-step="fallback" hidden>
+      <button class="dm-back" type="button" data-goto="upi-amount">&larr; Back</button>
+      <h3>Almost there</h3>
+      <p class="dm-sub">If your UPI app did not open, scan this code or use the UPI ID below.</p>
+      <div class="dm-amt-badge">₹101</div>
+      <div class="dm-qr"><img src="assets/img/upi-qr.jpg" alt="UPI QR code for Madanapalle Pyramid Spiritual Society" /></div>
+      <div class="copy-row"><code>6509092255@myapgb</code><button class="copybtn" type="button" data-copy="6509092255@myapgb">Copy</button></div>
+      <p class="dm-hint">After scanning, enter the amount shown above. Payments go to Madanapalle Pyramid Spiritual Society.</p>
+    </div>
+
+    <div class="dm-step" data-step="bank" hidden>
+      <button class="dm-back" type="button" data-goto="method">&larr; Back</button>
+      <h3>Bank Transfer</h3>
+      <div class="bank-dl">
+        <div class="brow"><span class="k">Account name</span><span class="v">Madanapalle Pyramid Spiritual Society</span></div>
+        <div class="brow"><span class="k">Account number</span><span class="v">650910016995155 <button class="copybtn" type="button" data-copy="650910016995155" style="margin-left:.3rem">Copy</button></span></div>
+        <div class="brow"><span class="k">IFSC code</span><span class="v">UBIN00G7999 <button class="copybtn" type="button" data-copy="UBIN00G7999" style="margin-left:.3rem">Copy</button></span></div>
+        <div class="brow"><span class="k">Bank</span><span class="v">Andhra Pradesh Grameena Bank, Madanapalle</span></div>
+        <div class="brow"><span class="k">UPI ID</span><span class="v">6509092255@myapgb</span></div>
+      </div>
+      <p class="dm-hint">Please confirm the account name reads Madanapalle Pyramid Spiritual Society before sending.</p>
+    </div>
+  </div>
+</div>
+
 <script>
   // Copy buttons
   document.querySelectorAll(".copybtn").forEach(function(b){
@@ -570,6 +677,53 @@
     es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);} });
   },{threshold:.12});
   document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
+
+  // Donate modal + UPI deep links
+  (function(){
+    var overlay=document.getElementById("donateModal");
+    if(!overlay) return;
+    var steps=overlay.querySelectorAll(".dm-step");
+    var VPA="6509092255@myapgb", PN="Madanapalle Pyramid Spiritual Society", TN="Pyramid Donation";
+    var amtInput=overlay.querySelector("#dmAmount");
+    var chips=overlay.querySelectorAll(".amt-chips button");
+    var err=overlay.querySelector(".dm-err");
+    var badge=overlay.querySelector(".dm-amt-badge");
+
+    function goto(name){ steps.forEach(function(s){ s.hidden = s.dataset.step!==name; }); }
+    function open(step){ overlay.hidden=false; requestAnimationFrame(function(){overlay.classList.add("show");}); goto(step||"method"); document.body.style.overflow="hidden"; }
+    function close(){ overlay.classList.remove("show"); document.body.style.overflow=""; setTimeout(function(){overlay.hidden=true;},200); }
+
+    overlay.addEventListener("click",function(e){ if(e.target===overlay) close(); });
+    overlay.querySelector(".modal-close").addEventListener("click",close);
+    document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !overlay.hidden) close(); });
+    document.querySelectorAll("[data-donate]").forEach(function(b){ b.addEventListener("click",function(e){ e.preventDefault(); open("method"); }); });
+    overlay.querySelectorAll("[data-goto]").forEach(function(b){ b.addEventListener("click",function(){ err.textContent=""; goto(b.dataset.goto); }); });
+
+    function setActive(v){ chips.forEach(function(c){ c.classList.toggle("active", parseInt(c.dataset.amt,10)===v); }); }
+    chips.forEach(function(c){ c.addEventListener("click",function(){ amtInput.value=c.dataset.amt; setActive(parseInt(c.dataset.amt,10)); err.textContent=""; }); });
+    amtInput.addEventListener("input",function(){ setActive(parseInt(amtInput.value,10)); err.textContent=""; });
+    amtInput.value="101"; setActive(101);
+
+    function buildLink(app,amt){
+      var q="pa="+VPA+"&pn="+encodeURIComponent(PN)+"&cu=INR&tn="+encodeURIComponent(TN)+(amt?"&am="+amt:"");
+      if(app==="gpay") return "tez://upi/pay?"+q;
+      if(app==="phonepe") return "phonepe://pay?"+q;
+      if(app==="paytm") return "paytmmp://pay?"+q;
+      if(app==="bhim") return "bhim://upi/pay?"+q;
+      return "upi://pay?"+q;
+    }
+
+    overlay.querySelectorAll(".app-btn").forEach(function(b){
+      b.addEventListener("click",function(){
+        var amt=Math.round(parseFloat(amtInput.value)||0);
+        if(!(amt>=1)){ err.textContent="Please enter an amount of at least ₹1."; amtInput.focus(); return; }
+        err.textContent="";
+        badge.textContent="₹"+amt.toLocaleString("en-IN");
+        goto("fallback");
+        window.location.href=buildLink(b.dataset.app,amt);
+      });
+    });
+  })();
 </script>
 </body>
 </html>
