@@ -625,9 +625,15 @@
       </div>
       <div class="dm-amount-wrap"><span>₹</span><input id="dmAmount" type="number" min="1" step="1" inputmode="numeric" placeholder="Enter amount" aria-label="Donation amount in rupees" /></div>
       <div class="dm-err" role="alert"></div>
-      <button class="app-btn app-any" type="button" data-app="any" style="width:100%;justify-content:center;padding:.9rem;font-size:1rem"><span class="dm-ic" style="font-size:1.2rem">📲</span> Open my UPI app to pay</button>
-      <p class="dm-label" style="text-align:center;margin-top:.7rem">Your phone will let you choose Google Pay, PhonePe, Paytm, BHIM or any UPI app, with the amount already filled in.</p>
-      <p class="dm-hint">On a computer, or if no app opens, scan the QR on the next screen (that always works). For a larger amount, go Back and use <strong>Bank transfer via any UPI app</strong>.</p>
+      <p class="dm-label">Tap your app (amount is pre-filled):</p>
+      <div class="apps-grid">
+        <button class="app-btn" type="button" data-app="phonepe"><span class="dot" style="background:#5F259F">P</span> PhonePe</button>
+        <button class="app-btn" type="button" data-app="gpay"><span class="dot" style="background:#4285F4">G</span> Google Pay</button>
+        <button class="app-btn" type="button" data-app="paytm"><span class="dot" style="background:#00BAF2">P</span> Paytm</button>
+        <button class="app-btn" type="button" data-app="bhim"><span class="dot" style="background:#F26522">B</span> BHIM</button>
+        <button class="app-btn app-any" type="button" data-app="any">Any other UPI app</button>
+      </div>
+      <p class="dm-hint">Your chosen app opens with the amount filled in. If it does not open (or on a computer), scan the QR on the next screen, that always works. For a larger amount, go Back and use <strong>Bank transfer via any UPI app</strong>.</p>
     </div>
 
     <div class="dm-step" data-step="fallback" hidden>
@@ -699,10 +705,16 @@
     amtInput.addEventListener("input",function(){ setActive(parseInt(amtInput.value,10)); err.textContent=""; });
     amtInput.value="101"; setActive(101);
 
+    var PKG={gpay:"com.google.android.apps.nbu.paisa.user",phonepe:"com.phonepe.app",paytm:"net.one97.paytm",bhim:"in.org.npci.upiapp"};
     function buildLink(app,amt){
-      // Always use the standard UPI intent (same as scanning the QR). App-specific
-      // custom schemes are unreliable and can error, so we avoid them.
       var q="pa="+VPA+"&pn="+encodeURIComponent(PN)+"&cu=INR&tn="+encodeURIComponent(TN)+(amt?"&am="+amt:"");
+      var isAndroid=/android/i.test(navigator.userAgent);
+      // On Android, target the chosen app directly with an intent:// URL + package,
+      // so it does not fall through to the phone's default UPI app (e.g. WhatsApp).
+      if(isAndroid && PKG[app]){
+        return "intent://pay?"+q+"#Intent;scheme=upi;package="+PKG[app]+";end";
+      }
+      // Any UPI app, or iOS/desktop: standard UPI intent (same as scanning the QR).
       return "upi://pay?"+q;
     }
 
