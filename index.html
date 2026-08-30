@@ -711,35 +711,25 @@
     amtInput.addEventListener("input",function(){ setActive(parseInt(amtInput.value,10)); err.textContent=""; });
     amtInput.value="101"; setActive(101);
 
-    var PKG={gpay:"com.google.android.apps.nbu.paisa.user",phonepe:"com.phonepe.app",paytm:"net.one97.paytm",bhim:"in.org.npci.upiapp"};
+    // App-specific schemes launch the chosen UPI app directly. These proved to open
+    // the apps correctly; the "limit exceeded" seen inside the app is a separate UPI
+    // cap, handled by the Bank transfer option for larger amounts.
+    var SCHEME={gpay:"tez://upi/pay?",phonepe:"phonepe://pay?",paytm:"paytmmp://pay?",bhim:"bhim://upi/pay?"};
     function buildLink(app,amt){
       var q="pa="+VPA+"&pn="+encodeURIComponent(PN)+"&cu=INR&tn="+encodeURIComponent(TN)+(amt?"&am="+amt:"");
-      var isAndroid=/android/i.test(navigator.userAgent);
-      // On Android, target the chosen app directly with an intent:// URL + package,
-      // so it does not fall through to the phone's default UPI app (e.g. WhatsApp).
-      if(isAndroid && PKG[app]){
-        return "intent://pay?"+q+"#Intent;scheme=upi;package="+PKG[app]+";end";
-      }
-      // Any UPI app, or iOS/desktop: standard UPI intent (same as scanning the QR).
-      return "upi://pay?"+q;
+      return (SCHEME[app]||"upi://pay?")+q;
     }
 
-    var onAndroid=/android/i.test(navigator.userAgent);
-    if(!onAndroid){
-      var lbl=overlay.querySelector('[data-step="upi-amount"] .dm-label');
-      if(lbl) lbl.textContent="Choose an amount, then tap below to get the QR to scan with your app:";
-    }
     overlay.querySelectorAll(".app-btn").forEach(function(b){
       b.addEventListener("click",function(){
         var amt=Math.round(parseFloat(amtInput.value)||0);
         if(!(amt>=1)){ err.textContent="Please enter an amount of at least ₹1."; amtInput.focus(); return; }
         err.textContent="";
         badge.textContent="₹"+amt.toLocaleString("en-IN");
+        // Show the QR/UPI-ID fallback first, then try to open the chosen app. If the app
+        // opens, great; if not (or on iPhone/desktop), the QR is already on screen.
         goto("fallback");
-        // Android can open the chosen app directly. iPhone/desktop cannot target a
-        // specific UPI app from the web (it would open the default app like WhatsApp),
-        // so there we simply show the QR + UPI ID on the fallback screen to scan/paste.
-        if(onAndroid){ window.location.href=buildLink(b.dataset.app,amt); }
+        window.location.href=buildLink(b.dataset.app,amt);
       });
     });
   })();
