@@ -711,8 +711,10 @@
     // QR, amount left blank) so the bank signature stays valid and apps treat it as a
     // merchant payment (no per-payee cap). We must NEVER add or change `am`: any change
     // breaks the signature and the app blocks it. The donor types the amount in the app.
-    var MQ="pa=6509092255@myapgb&pn=MADANAPALL&mc=8398&tn=&am=&cu=INR&refUrl=www.cggbbank.co.in&sign="
-          +encodeURIComponent("rL0Ye2NGysSsxb5lxiaO+3CtoUuOhuSJr8ocXSitNfr+mnK8BNCQ5jZJovjTM0Rc4bssFU1vT9apuVqKzsW+Jw==");
+    // NOTE: the sign is kept LITERAL (raw + and =), exactly as in the QR. UPI apps read
+    // the signature as-is; URL-encoding it (%2B/%3D) corrupts it and the app blocks the
+    // payment. This string is byte-for-byte identical to the scanned QR content.
+    var MQ="pa=6509092255@myapgb&pn=MADANAPALL&mc=8398&tn=&am=&cu=INR&refUrl=www.cggbbank.co.in&sign=rL0Ye2NGysSsxb5lxiaO+3CtoUuOhuSJr8ocXSitNfr+mnK8BNCQ5jZJovjTM0Rc4bssFU1vT9apuVqKzsW+Jw==";
     function buildLink(app){
       return (SCHEME[app]||"upi://pay?")+MQ;
     }
