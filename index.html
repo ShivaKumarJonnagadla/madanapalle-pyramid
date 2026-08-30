@@ -713,13 +713,12 @@
 
     // App-specific schemes launch the chosen UPI app directly.
     var SCHEME={gpay:"tez://upi/pay?",phonepe:"phonepe://pay?",paytm:"paytmmp://pay?",bhim:"bhim://upi/pay?"};
-    // Mirror the bank's SIGNED MERCHANT QR (mc=8398 charity + sign) so UPI apps treat
-    // this as a verified merchant payment (higher limit, no new-payee cap), exactly like
-    // scanning the QR. Only the amount is added; the signed fields are kept verbatim.
-    var MSIGN="rL0Ye2NGysSsxb5lxiaO+3CtoUuOhuSJr8ocXSitNfr+mnK8BNCQ5jZJovjTM0Rc4bssFU1vT9apuVqKzsW+Jw==";
     function buildLink(app,amt){
-      var q="pa=6509092255@myapgb&pn=MADANAPALL&mc=8398&tn=&am="+(amt||"")
-           +"&cu=INR&refUrl=www.cggbbank.co.in&sign="+encodeURIComponent(MSIGN);
+      // Standard, legitimate UPI payment intent (payee VPA + amount). We do NOT reuse the
+      // QR's merchant signature in a link, because apps block that as a security risk.
+      // Small amounts go through one-tap; a large first payment hits UPI's own new-payee
+      // limit, for which the page offers Bank transfer or scanning the QR.
+      var q="pa="+VPA+"&pn="+encodeURIComponent(PN)+"&cu=INR&tn="+encodeURIComponent(TN)+(amt?"&am="+amt:"");
       return (SCHEME[app]||"upi://pay?")+q;
     }
 
