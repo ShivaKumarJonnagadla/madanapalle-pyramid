@@ -701,7 +701,7 @@
 
     function buildLink(app,amt){
       // Always use the standard UPI intent (same as scanning the QR). App-specific
-      // schemes (tez://, phonepe://, ...) are unreliable and can error, so we avoid them.
+      // custom schemes are unreliable and can error, so we avoid them.
       var q="pa="+VPA+"&pn="+encodeURIComponent(PN)+"&cu=INR&tn="+encodeURIComponent(TN)+(amt?"&am="+amt:"");
       return "upi://pay?"+q;
     }
