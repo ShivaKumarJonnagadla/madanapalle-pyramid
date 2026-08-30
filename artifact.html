@@ -633,7 +633,7 @@
         <button class="app-btn" type="button" data-app="bhim"><span class="dot" style="background:#F26522">B</span> BHIM</button>
         <button class="app-btn app-any" type="button" data-app="any">Any other UPI app</button>
       </div>
-      <p class="dm-hint">Your chosen app opens as a donation to the society; enter the amount shown. If it does not open (or on a computer), scan the QR on the next screen, that always works. You can also use <strong>Bank transfer via any UPI app</strong> from the previous screen.</p>
+      <p class="dm-hint">Your app opens as a donation to the society; enter the amount shown. If it does not open (or on a computer), scan the QR on the next screen, that always works. You can also use <strong>Bank transfer via any UPI app</strong>.</p>
     </div>
 
     <div class="dm-step" data-step="fallback" hidden>
@@ -707,16 +707,13 @@
 
     // App-specific schemes launch the chosen UPI app directly.
     var SCHEME={gpay:"tez://upi/pay?",phonepe:"phonepe://pay?",paytm:"paytmmp://pay?",bhim:"bhim://upi/pay?"};
-    // The bank's QR is a SIGNED MERCHANT intent. We deliver it VERBATIM (identical to the
-    // QR, amount left blank) so the bank signature stays valid and apps treat it as a
-    // merchant payment (no per-payee cap). We must NEVER add or change `am`: any change
-    // breaks the signature and the app blocks it. The donor types the amount in the app.
-    // NOTE: the sign is kept LITERAL (raw + and =), exactly as in the QR. UPI apps read
-    // the signature as-is; URL-encoding it (%2B/%3D) corrupts it and the app blocks the
-    // payment. This string is byte-for-byte identical to the scanned QR content.
-    var MQ="pa=6509092255@myapgb&pn=MADANAPALL&mc=8398&tn=&am=&cu=INR&refUrl=www.cggbbank.co.in&sign=rL0Ye2NGysSsxb5lxiaO+3CtoUuOhuSJr8ocXSitNfr+mnK8BNCQ5jZJovjTM0Rc4bssFU1vT9apuVqKzsW+Jw==";
+    // Merchant intent from the bank's signed QR (mc=8398 + sign), amount blank so the
+    // signature stays valid. The signature is URL-encoded for the deep link; the donor
+    // enters the amount inside the app.
+    var MSIGN="rL0Ye2NGysSsxb5lxiaO+3CtoUuOhuSJr8ocXSitNfr+mnK8BNCQ5jZJovjTM0Rc4bssFU1vT9apuVqKzsW+Jw==";
     function buildLink(app){
-      return (SCHEME[app]||"upi://pay?")+MQ;
+      var q="pa=6509092255@myapgb&pn=MADANAPALL&mc=8398&tn=&am=&cu=INR&refUrl=www.cggbbank.co.in&sign="+encodeURIComponent(MSIGN);
+      return (SCHEME[app]||"upi://pay?")+q;
     }
 
     overlay.querySelectorAll(".app-btn").forEach(function(b){
@@ -725,8 +722,7 @@
         if(!(amt>=1)){ err.textContent="Please enter an amount of at least ₹1."; amtInput.focus(); return; }
         err.textContent="";
         badge.textContent="₹"+amt.toLocaleString("en-IN");
-        // Show the QR/UPI-ID fallback first (with the amount to type), then open the app.
-        // If the app opens, the donor enters that amount; if not, the QR is already shown.
+        // Show the QR fallback first (with the amount to type), then open the chosen app.
         goto("fallback");
         window.location.href=buildLink(b.dataset.app);
       });
