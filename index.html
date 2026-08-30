@@ -645,7 +645,7 @@
     <div class="dm-step" data-step="fallback" hidden>
       <button class="dm-back" type="button" data-goto="upi-amount">&larr; Back</button>
       <h3>Almost there</h3>
-      <p class="dm-sub">If your UPI app did not open, scan this code or use the UPI ID below.</p>
+      <p class="dm-sub">Open your UPI app (PhonePe, Google Pay, Paytm or BHIM) and scan this code, or copy the UPI ID below. Enter the amount shown.</p>
       <div class="dm-amt-badge">₹101</div>
       <div class="dm-qr"><img src="assets/img/upi-qr.jpg" alt="UPI QR code for Madanapalle Pyramid Spiritual Society" /></div>
       <div class="copy-row"><code>6509092255@myapgb</code><button class="copybtn" type="button" data-copy="6509092255@myapgb">Copy</button></div>
@@ -724,6 +724,11 @@
       return "upi://pay?"+q;
     }
 
+    var onAndroid=/android/i.test(navigator.userAgent);
+    if(!onAndroid){
+      var lbl=overlay.querySelector('[data-step="upi-amount"] .dm-label');
+      if(lbl) lbl.textContent="Choose an amount, then tap below to get the QR to scan with your app:";
+    }
     overlay.querySelectorAll(".app-btn").forEach(function(b){
       b.addEventListener("click",function(){
         var amt=Math.round(parseFloat(amtInput.value)||0);
@@ -731,7 +736,10 @@
         err.textContent="";
         badge.textContent="₹"+amt.toLocaleString("en-IN");
         goto("fallback");
-        window.location.href=buildLink(b.dataset.app,amt);
+        // Android can open the chosen app directly. iPhone/desktop cannot target a
+        // specific UPI app from the web (it would open the default app like WhatsApp),
+        // so there we simply show the QR + UPI ID on the fallback screen to scan/paste.
+        if(onAndroid){ window.location.href=buildLink(b.dataset.app,amt); }
       });
     });
   })();
