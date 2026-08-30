@@ -625,7 +625,7 @@
       </div>
       <div class="dm-amount-wrap"><span>₹</span><input id="dmAmount" type="number" min="1" step="1" inputmode="numeric" placeholder="Enter amount" aria-label="Donation amount in rupees" /></div>
       <div class="dm-err" role="alert"></div>
-      <p class="dm-label">Tap your app (amount is pre-filled):</p>
+      <p class="dm-label">Tap your app, then enter this amount in the app:</p>
       <div class="apps-grid">
         <button class="app-btn" type="button" data-app="phonepe"><span class="dot" style="background:#5F259F">P</span> PhonePe</button>
         <button class="app-btn" type="button" data-app="gpay"><span class="dot" style="background:#4285F4">G</span> Google Pay</button>
@@ -633,7 +633,7 @@
         <button class="app-btn" type="button" data-app="bhim"><span class="dot" style="background:#F26522">B</span> BHIM</button>
         <button class="app-btn app-any" type="button" data-app="any">Any other UPI app</button>
       </div>
-      <p class="dm-hint">Your chosen app opens with the amount filled in. If it does not open (or on a computer), scan the QR on the next screen, that always works. For a larger amount, go Back and use <strong>Bank transfer via any UPI app</strong>.</p>
+      <p class="dm-hint">Your chosen app opens as a donation to the society; enter the amount shown. If it does not open (or on a computer), scan the QR on the next screen, that always works. You can also use <strong>Bank transfer via any UPI app</strong> from the previous screen.</p>
     </div>
 
     <div class="dm-step" data-step="fallback" hidden>
@@ -707,13 +707,14 @@
 
     // App-specific schemes launch the chosen UPI app directly.
     var SCHEME={gpay:"tez://upi/pay?",phonepe:"phonepe://pay?",paytm:"paytmmp://pay?",bhim:"bhim://upi/pay?"};
-    function buildLink(app,amt){
-      // Standard, legitimate UPI payment intent (payee VPA + amount). We do NOT reuse the
-      // QR's merchant signature in a link, because apps block that as a security risk.
-      // Small amounts go through one-tap; a large first payment hits UPI's own new-payee
-      // limit, for which the page offers Bank transfer or scanning the QR.
-      var q="pa="+VPA+"&pn="+encodeURIComponent(PN)+"&cu=INR&tn="+encodeURIComponent(TN)+(amt?"&am="+amt:"");
-      return (SCHEME[app]||"upi://pay?")+q;
+    // The bank's QR is a SIGNED MERCHANT intent. We deliver it VERBATIM (identical to the
+    // QR, amount left blank) so the bank signature stays valid and apps treat it as a
+    // merchant payment (no per-payee cap). We must NEVER add or change `am`: any change
+    // breaks the signature and the app blocks it. The donor types the amount in the app.
+    var MQ="pa=6509092255@myapgb&pn=MADANAPALL&mc=8398&tn=&am=&cu=INR&refUrl=www.cggbbank.co.in&sign="
+          +encodeURIComponent("rL0Ye2NGysSsxb5lxiaO+3CtoUuOhuSJr8ocXSitNfr+mnK8BNCQ5jZJovjTM0Rc4bssFU1vT9apuVqKzsW+Jw==");
+    function buildLink(app){
+      return (SCHEME[app]||"upi://pay?")+MQ;
     }
 
     overlay.querySelectorAll(".app-btn").forEach(function(b){
@@ -722,10 +723,10 @@
         if(!(amt>=1)){ err.textContent="Please enter an amount of at least ₹1."; amtInput.focus(); return; }
         err.textContent="";
         badge.textContent="₹"+amt.toLocaleString("en-IN");
-        // Show the QR/UPI-ID fallback first, then try to open the chosen app. If the app
-        // opens, great; if not (or on iPhone/desktop), the QR is already on screen.
+        // Show the QR/UPI-ID fallback first (with the amount to type), then open the app.
+        // If the app opens, the donor enters that amount; if not, the QR is already shown.
         goto("fallback");
-        window.location.href=buildLink(b.dataset.app,amt);
+        window.location.href=buildLink(b.dataset.app);
       });
     });
   })();
