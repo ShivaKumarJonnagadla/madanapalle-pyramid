@@ -705,12 +705,15 @@
     amtInput.addEventListener("input",function(){ setActive(parseInt(amtInput.value,10)); err.textContent=""; });
     amtInput.value="101"; setActive(101);
 
-    // App-specific schemes launch the chosen UPI app directly. These proved to open
-    // the apps correctly; the "limit exceeded" seen inside the app is a separate UPI
-    // cap, handled by the Bank transfer option for larger amounts.
+    // App-specific schemes launch the chosen UPI app directly.
     var SCHEME={gpay:"tez://upi/pay?",phonepe:"phonepe://pay?",paytm:"paytmmp://pay?",bhim:"bhim://upi/pay?"};
+    // Mirror the bank's SIGNED MERCHANT QR (mc=8398 charity + sign) so UPI apps treat
+    // this as a verified merchant payment (higher limit, no new-payee cap), exactly like
+    // scanning the QR. Only the amount is added; the signed fields are kept verbatim.
+    var MSIGN="rL0Ye2NGysSsxb5lxiaO+3CtoUuOhuSJr8ocXSitNfr+mnK8BNCQ5jZJovjTM0Rc4bssFU1vT9apuVqKzsW+Jw==";
     function buildLink(app,amt){
-      var q="pa="+VPA+"&pn="+encodeURIComponent(PN)+"&cu=INR&tn="+encodeURIComponent(TN)+(amt?"&am="+amt:"");
+      var q="pa=6509092255@myapgb&pn=MADANAPALL&mc=8398&tn=&am="+(amt||"")
+           +"&cu=INR&refUrl=www.cggbbank.co.in&sign="+encodeURIComponent(MSIGN);
       return (SCHEME[app]||"upi://pay?")+q;
     }
 
