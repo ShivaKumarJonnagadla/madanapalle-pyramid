@@ -631,7 +631,8 @@
       </div>
       <div class="dm-amount-wrap"><span>₹</span><input id="dmAmount" type="number" min="1" step="1" inputmode="numeric" placeholder="Enter amount" aria-label="Donation amount in rupees" /></div>
       <div class="dm-err" role="alert"></div>
-      <p class="dm-label">Tap your app, then enter this amount in the app:</p>
+      <button class="app-btn app-any" type="button" data-app="qr" style="width:100%;justify-content:center;padding:.95rem;font-weight:700;border-color:var(--accent)"><span class="dm-ic" style="font-size:1.15rem">🔳</span> Show QR to scan &middot; any amount</button>
+      <p class="dm-label" style="text-align:center;margin-top:.7rem">Scanning has no limit and works for any amount. Or use an app below for a quick smaller gift:</p>
       <div class="apps-grid">
         <button class="app-btn" type="button" data-app="phonepe"><span class="dot" style="background:#5F259F">P</span> PhonePe</button>
         <button class="app-btn" type="button" data-app="gpay"><span class="dot" style="background:#4285F4">G</span> Google Pay</button>
@@ -639,7 +640,7 @@
         <button class="app-btn" type="button" data-app="bhim"><span class="dot" style="background:#F26522">B</span> BHIM</button>
         <button class="app-btn app-any" type="button" data-app="any">Any other UPI app</button>
       </div>
-      <p class="dm-hint">Your app opens as a donation to the society; enter the amount shown. If it does not open (or on a computer), scan the QR on the next screen, that always works. You can also use <strong>Bank transfer via any UPI app</strong>.</p>
+      <p class="dm-hint">App buttons open with the amount filled in, best for smaller amounts. For a larger amount, use the QR above (scan it in your app), or go Back for <strong>Bank transfer</strong>.</p>
     </div>
 
     <div class="dm-step" data-step="fallback" hidden>
@@ -713,24 +714,26 @@
 
     // App-specific schemes launch the chosen UPI app directly.
     var SCHEME={gpay:"tez://upi/pay?",phonepe:"phonepe://pay?",paytm:"paytmmp://pay?",bhim:"bhim://upi/pay?"};
-    // Merchant intent from the bank's signed QR (mc=8398 + sign), amount blank so the
-    // signature stays valid. The signature is URL-encoded for the deep link; the donor
-    // enters the amount inside the app.
-    var MSIGN="rL0Ye2NGysSsxb5lxiaO+3CtoUuOhuSJr8ocXSitNfr+mnK8BNCQ5jZJovjTM0Rc4bssFU1vT9apuVqKzsW+Jw==";
-    function buildLink(app){
-      var q="pa=6509092255@myapgb&pn=MADANAPALL&mc=8398&tn=&am=&cu=INR&refUrl=www.cggbbank.co.in&sign="+encodeURIComponent(MSIGN);
+    function buildLink(app,amt){
+      // Plain UPI intent. The bank's SIGNED merchant QR cannot be delivered as a link:
+      // apps trust that signature only from a live camera scan (both literal and encoded
+      // links are blocked as a security measure). So app buttons use this plain intent
+      // (one-tap, fine for smaller amounts); for any amount, donors SCAN the QR.
+      var q="pa="+VPA+"&pn="+encodeURIComponent(PN)+"&cu=INR&tn="+encodeURIComponent(TN)+(amt?"&am="+amt:"");
       return (SCHEME[app]||"upi://pay?")+q;
     }
 
     overlay.querySelectorAll(".app-btn").forEach(function(b){
       b.addEventListener("click",function(){
+        var isQr=b.dataset.app==="qr";
         var amt=Math.round(parseFloat(amtInput.value)||0);
-        if(!(amt>=1)){ err.textContent="Please enter an amount of at least ₹1."; amtInput.focus(); return; }
+        if(!isQr && !(amt>=1)){ err.textContent="Please enter an amount of at least ₹1."; amtInput.focus(); return; }
         err.textContent="";
-        badge.textContent="₹"+amt.toLocaleString("en-IN");
-        // Show the QR fallback first (with the amount to type), then open the chosen app.
+        badge.textContent = amt>=1 ? "₹"+amt.toLocaleString("en-IN") : "";
+        // Show the QR fallback (with the amount to type). For an app button, also open the
+        // app with the amount pre-filled; the QR button just shows the QR to scan.
         goto("fallback");
-        window.location.href=buildLink(b.dataset.app);
+        if(!isQr){ window.location.href=buildLink(b.dataset.app,amt); }
       });
     });
   })();
