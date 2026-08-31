@@ -5,7 +5,7 @@ Keep the UPI ID and account name exactly as written.
 
 Donation shortcuts to paste anywhere:
 - **UPI:** `6509092255@myapgb`  (Google Pay / PhonePe / Paytm / BHIM)
-- **A/C:** 650910016995155 · **IFSC:** UBIN00G7999 · Andhra Pradesh Grameena Bank, Madanapalle
+- **A/C:** 650910016995155 · **IFSC:** UBIN0CG7999 · Andhra Pradesh Grameena Bank, Madanapalle
 - **Name:** Madanapalle Pyramid Spiritual Society
 
 ---
@@ -57,7 +57,7 @@ Donation shortcuts to paste anywhere:
 > **https://madanapalle-pyramid.vercel.app**
 >
 > 📲 UPI: **6509092255@myapgb** (GPay / PhonePe / Paytm / BHIM)
-> 🏦 A/C: 650910016995155 · IFSC: UBIN00G7999 · Andhra Pradesh Grameena Bank, Madanapalle
+> 🏦 A/C: 650910016995155 · IFSC: UBIN0CG7999 · Andhra Pradesh Grameena Bank, Madanapalle
 > 🧾 Account name: **Madanapalle Pyramid Spiritual Society**
 >
 > ☎️ Contacts, President J. Anuradha +91 92469 83035 · Vice President T. Venkataramana +91 99893 58319 · Treasurer Subramanyam +91 99898 59591
@@ -79,7 +79,7 @@ Donation shortcuts to paste anywhere:
 > 📖 Story, photos & videos: https://madanapalle-pyramid.vercel.app
 >
 > 📲 *UPI:* `6509092255@myapgb`
-> 🏦 A/C 650910016995155 · IFSC UBIN00G7999
+> 🏦 A/C 650910016995155 · IFSC UBIN0CG7999
 > 🧾 Madanapalle Pyramid Spiritual Society
 >
 > ☎️ President J. Anuradha +91 92469 83035 · Treasurer Subramanyam +91 99898 59591
@@ -98,7 +98,7 @@ Donation shortcuts to paste anywhere:
 >
 > 📖 వివరాలు, ఫోటోలు, వీడియోలు: https://madanapalle-pyramid.vercel.app
 > 📲 UPI: `6509092255@myapgb`
-> 🏦 Madanapalle Pyramid Spiritual Society · A/C 650910016995155 · IFSC UBIN00G7999
+> 🏦 Madanapalle Pyramid Spiritual Society · A/C 650910016995155 · IFSC UBIN0CG7999
 >
 > దయచేసి దానం చేసి, ఈ సందేశాన్ని అందరికీ పంపండి 🙏
 
@@ -114,7 +114,7 @@ Donation shortcuts to paste anywhere:
 >
 > 📖 विवरण, तस्वीरें व वीडियो: https://madanapalle-pyramid.vercel.app
 > 📲 UPI: `6509092255@myapgb`
-> 🏦 Madanapalle Pyramid Spiritual Society · A/C 650910016995155 · IFSC UBIN00G7999
+> 🏦 Madanapalle Pyramid Spiritual Society · A/C 650910016995155 · IFSC UBIN0CG7999
 >
 > कृपया दान करें और इस संदेश को सभी तक पहुँचाएँ 🙏
 
@@ -173,7 +173,7 @@ and post the short "Main tweet", then add each language as a reply in the thread
 > यहीं आपकी भूमिका है। आपका दान, मात्र ₹10 भी, इस पिरामिड को पूरा करने में मदद करेगा। कल कोई अनजान व्यक्ति इसके नीचे बैठकर आँखें मूँदेगा और शांति पाएगा, और उस शांति का एक हिस्सा आपका होगा। 🙏
 >
 > 📲 UPI: 6509092255@myapgb  (GPay / PhonePe / Paytm / BHIM)
-> 🏦 A/C 650910016995155 · IFSC UBIN00G7999 · Andhra Pradesh Grameena Bank
+> 🏦 A/C 650910016995155 · IFSC UBIN0CG7999 · Andhra Pradesh Grameena Bank
 > 🌐 https://madanapalle-pyramid.vercel.app
 > ☎️ President J. Anuradha +91 92469 83035 · Treasurer Subramanyam +91 99898 59591
 >

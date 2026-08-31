@@ -98,7 +98,7 @@ def donation_panel(M, y, W, ph=250, qr=196):
     pd.text((tx, y+28), "SCAN TO DONATE", font=uni(24), fill=(200,120,20))
     pd.text((tx, y+64), "UPI  6509092255@myapgb", font=uni(30), fill=INK)
     pd.text((tx, y+106), "A/C 650910016995155", font=uni(23), fill=(80,74,90))
-    pd.text((tx, y+138), "IFSC UBIN00G7999 · AP Grameena Bank", font=uni(22), fill=(80,74,90))
+    pd.text((tx, y+138), "IFSC UBIN0CG7999 · AP Grameena Bank", font=uni(22), fill=(80,74,90))
     pd.text((tx, y+180), "madanapalle-pyramid.vercel.app", font=uni(26), fill=(150,100,10))
     return y + ph
 

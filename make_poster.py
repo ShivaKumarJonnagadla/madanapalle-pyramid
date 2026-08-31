@@ -140,7 +140,7 @@ tx = M+28+196+34
 pd.text((tx, y+30), "SCAN TO DONATE", font=uni(24), fill=(GOLD[0]-20,120,20))
 pd.text((tx, y+66), "UPI  6509092255@myapgb", font=uni(30), fill=INK)
 pd.text((tx, y+108), "A/C 650910016995155", font=uni(24), fill=(80,74,90))
-pd.text((tx, y+140), "IFSC UBIN00G7999 · AP Grameena Bank", font=uni(23), fill=(80,74,90))
+pd.text((tx, y+140), "IFSC UBIN0CG7999 · AP Grameena Bank", font=uni(23), fill=(80,74,90))
 pd.text((tx, y+182), "madanapalle-pyramid.vercel.app", font=uni(27), fill=(150,100,10))
 y += panel_h + 34
 
